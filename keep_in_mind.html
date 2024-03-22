@@ -21,4 +21,13 @@
 
     So the crux is this: The LP gives you a solution which you know is "good", and you want to round it to something that is "almost as good". If the integrality gap is large, this is impossible in general, since there will never be a procedure which is guaranteed to get an integral solution that is "amost as good" as an LP solution -- because sometimes, these don't exist!
     </p>
+    <h2>Hardness of Shortest Path</h2>
+    <p>
+     <li>Allowing only non-negative weight edges, Shortest-Path=Shortest Simple Path, polynomial-time solvable</li>
+     <li>Allowing negative weight, but no negative cycle, Shortest-Path = Shortest Simple Path, Dijkstra won't work, but Bellman-Ford works in polynomial time</li>
+     <li>Allowing negative weight, allowing negative cycle, Shortest Path makes no sense, Shortest Simple Path is NP-hard by reducing from Longest Simple Path problem (negating the weight of all edges)</li>
+     <li>Longest Simple Path is NP-hard by reduction from Hamiltonian Path: Take any graph, assign each edge weight of \(1\), then the graph is Hamiltonian \(if.f.\) longest simple path has length \(n-1\)</li>
+    </p>
+    <p>In any sense, Shortest Path problem is indeed Shortest Simple Path problem</p>
+
 </body>
